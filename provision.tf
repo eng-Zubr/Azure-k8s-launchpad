@@ -11,7 +11,7 @@ EOF
   }
   provisioner "local-exec" {
     command = <<EOF
-cd helm/kubernetes-helm-hello-world && helm install helloworld helloworld-chart-0.1.0.tgz
+cd helm/kubernetes-helm-hello-world && helm package helloworld-chart --debug && helm install helloworld helloworld-chart-0.1.0.tgz
 EOF
   }
   provisioner "local-exec" {
